@@ -20,20 +20,20 @@ makeCacheMatrix <- function(x = matrix()) {
   
   mat.inv <- NULL
   
-  get <- function() x
-  
   set <- function(mt) {
     x <<- mt
     mat.inv <<- NULL
   }
   
-  get.inv <- function() mat.inv
+  get <- function() x
   
   set.inv <- function(mtinv){
     
     mat.inv <<- mtinv
     
   }
+
+  get.inv <- function() mat.inv
   
   list(set=set, get=get, getinv=get.inv, setinv=set.inv)
 }
